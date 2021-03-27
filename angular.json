@@ -36,6 +36,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "https://TheTerabit.github.io/code-metrics-front/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
