@@ -1,5 +1,4 @@
 <div class="sidenav">
-
     <a *ngIf="current=='home'; else notHome" routerLink="/" routerLinkActive="active"><img class="current" src="https://image.flaticon.com/icons/svg/553/553376.svg" alt="Home" width="20px" height = "20px"></a>
     <ng-template #notHome>
       <a routerLink="/" routerLinkActive="active"><img src="https://image.flaticon.com/icons/svg/553/553376.svg" alt="Home" width="20px" height = "20px"></a>
@@ -13,4 +12,3 @@
       <a routerLink="/about-metrics" routerLinkActive="active"> <img src="https://toppng.com/uploads/preview/question-mark-icon-png-11552242888j3jye52osf.png" alt="About metrics" width="20px" height = "20px"></a>
     </ng-template>
 </div>
-  

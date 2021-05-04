@@ -1,8 +1,21 @@
 <div class="page-wrap">
-    <div class="sidenav">
-        <app-side-navbar [current]="current"></app-side-navbar>
-    </div>
-    <div class="content">
-        <h1>Upload a file</h1>
+  <div class="sidenav">
+    <app-side-navbar [current]="current"></app-side-navbar>
+  </div>
+  <div class="content">
+    <div class="metrics-form">
+      <h2>Upload file</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-element">
+          <input (change)="handleFileInput($event)"
+                 id="file"
+                 name="file"
+                 multiple="multiple"
+                 required="required"
+                 type="file">
+          </div>
+          <input type="submit" value="Submit"/>
+        </form>
+      </div>
     </div>
 </div>

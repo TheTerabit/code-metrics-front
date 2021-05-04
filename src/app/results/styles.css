@@ -1,0 +1,20 @@
+.completed {
+  color: greenyellow;
+}
+
+.running {
+  color: #03e9f4;
+}
+
+.stopped {
+  color: red;
+}
+
+.metrics-result {
+  margin-bottom: 40px;
+}
+
+.metrics-result h1 {
+  text-transform: uppercase;
+  letter-spacing: 4px
+}

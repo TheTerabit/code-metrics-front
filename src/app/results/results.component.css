@@ -1,0 +1,11 @@
+.metrics-result-wrapper {
+  width: 1200px;
+  max-width: 95%;
+}
+
+.metrics-result-wrapper h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}

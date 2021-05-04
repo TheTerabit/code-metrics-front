@@ -1,69 +1,28 @@
-import { Injectable, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {Router} from '@angular/router';
-import { Observable, throwError } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RestapiService {
+  baseUrl = 'https://code-metrics.azurewebsites.net/api/CodeMetrics';
 
-  constructor(private http: HttpClient, private router: Router) { }
-
-  public login(username: string, password: string): boolean {
-    return true;
-  }
-  public getUser(): Observable<User> {
-    return this.http.get<User>('https://paint-my-site-api.herokuapp.com/user');
+  constructor(private httpClient: HttpClient) {
   }
 
-  public getCategories() {
-    return this.http.get<Category[]>('https://paint-my-site-api.herokuapp.com/categories');
+  postFiles(filesToUpload: FileList): Observable<any> {
+    const endpoint = this.baseUrl + '/UploadFiles';
+    const formData: FormData = new FormData();
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < filesToUpload.length; i++) {
+      formData.append('files', filesToUpload[i]);
+    }
+    return this.httpClient.post(endpoint, formData);
   }
-  public getProjects() {
-    return this.http.get<Project[]>('https://paint-my-site-api.herokuapp.com/projects');
+
+  getResultsForProject(id: number): Observable<any> {
+    const endpoint = this.baseUrl + '/' + id;
+    return this.httpClient.get(endpoint);
   }
-  public getPhotos() {
-    return this.http.get<Photo[]>('https://paint-my-site-api.herokuapp.com/photos');
-  }
-  /*
-  const currentTodoList = this.storage.get(STORAGE_KEY);
-        
-  this.storage.set(STORAGE_KEY, currentTodoList);
-
-  */
-}
-interface Response {
-  login: string;
-}
-
-interface User {
-  name: string;
-  surname: string;
-  jobTitle: string;
-  aboutMe: string;
-  phoneNumber: string;
-  email: string;
-  profilePictureUrl: string;
-}
-interface Category {
-  id: number;
-  name: string;
-  description: string;
-  photoUrl: string;
-  projects: Project[];
-}
-interface Project {
-id: number;
-name: string;
-description: string;
-photos: Photo[];
-categoryId: number;
-}
-
-interface Photo {
-id: number;
-url: string;
-orderInProject: number;
-projectId: number;
 }

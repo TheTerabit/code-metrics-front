@@ -1,0 +1,73 @@
+.metrics-form {
+  width: 400px;
+}
+
+.metrics-form h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.metrics-form .form-element {
+  position: relative;
+}
+
+.metrics-form .form-element input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.metrics-form .form-element label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.metrics-form .form-element input:focus ~ label,
+.metrics-form .form-element input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.metrics-form form input[type="submit"] {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.metrics-form input[type="submit"]:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+  0 0 2px #03e9f4,
+  0 0 10px #03e9f4,
+  0 0 20px #03e9f4;
+}
+
+.metrics-form a span {
+  position: absolute;
+  display: block;
+}
