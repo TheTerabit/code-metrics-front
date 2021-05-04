@@ -1,0 +1,16 @@
+<div class="sidenav">
+
+    <a *ngIf="current=='home'; else notHome" routerLink="/" routerLinkActive="active"><img class="current" src="https://image.flaticon.com/icons/svg/553/553376.svg" alt="Home" width="20px" height = "20px"></a>
+    <ng-template #notHome>
+      <a routerLink="/" routerLinkActive="active"><img src="https://image.flaticon.com/icons/svg/553/553376.svg" alt="Home" width="20px" height = "20px"></a>
+    </ng-template>
+    <a *ngIf="current=='calculate'; else notGallery" routerLink="/calculate" routerLinkActive="active"><img class="current" src="https://www.pikpng.com/pngl/m/50-506513_gears-png-png-download-cogwheel-icon-free-clipart.png" alt="Calculate" width="20px" height = "20px"></a>
+    <ng-template #notGallery>
+      <a routerLink="/calculate" routerLinkActive="active"><img class="galleryButton" src="https://www.pikpng.com/pngl/m/50-506513_gears-png-png-download-cogwheel-icon-free-clipart.png" alt="Calculate" width="20px" height = "20px"></a>
+    </ng-template>
+    <a *ngIf="current=='about-metrics'; else notDashboard" routerLink="/about-metrics" routerLinkActive="active"><img class="current" src="https://toppng.com/uploads/preview/question-mark-icon-png-11552242888j3jye52osf.png" alt="About metrics" width="20px" height = "20px"></a>
+    <ng-template #notDashboard>
+      <a routerLink="/about-metrics" routerLinkActive="active"> <img src="https://toppng.com/uploads/preview/question-mark-icon-png-11552242888j3jye52osf.png" alt="About metrics" width="20px" height = "20px"></a>
+    </ng-template>
+</div>
+  
