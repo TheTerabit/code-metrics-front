@@ -1,0 +1,17 @@
+<div class="metrics-result">
+    <h1>Lines of code</h1>
+    <h4><span>Status: </span><span [ngClass]="data.taskStatus | lowercase">{{data.taskStatus}}</span></h4>
+    <div *ngIf="data.taskStatus == 'Completed'">
+      <table>
+        <tr>
+          <td class="caption">Entity name</td>
+          <td class="caption">Lines</td>
+        </tr>
+      <tr *ngFor="let metric of data.metricLineOfCodes">
+        <td>{{metric.entitName}}</td>
+        <td>{{metric.lineOfCodesCount}}</td>
+    </tr>
+    </table>
+  </div>
+  </div>
+  
