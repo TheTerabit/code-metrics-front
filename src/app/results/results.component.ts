@@ -31,7 +31,6 @@ export class ResultsComponent implements OnInit {
       results.metricMethods = new Result(MethodsResultComponent, data.metricMethodsResponse);
       results.metricFields = new Result(FieldsResultComponent, data.metricFieldsResponse);
       results.metricCyclomaticComplexity = new Result(CyclomaticComplexityResultComponent, data.metricCyclomaticComplexityResponse);
-      console.log(data.metricCyclomaticComplexityResponse)
       results.metricLineOfCode = new Result(LinesOfCodeResultComponent, data.metricLineOfCodesResponse);
       this.showMetricResults(results);
     });

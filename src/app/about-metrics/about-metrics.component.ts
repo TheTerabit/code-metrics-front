@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMetricsComponent implements OnInit {
 
-  current: string = "about-metrics";
+  current = 'about-metrics';
 
   constructor() { }
 
