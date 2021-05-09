@@ -1,6 +1,22 @@
 <div class="metrics-result">
   <h1>Fields</h1>
   <h4><span>Status: </span><span [ngClass]="data.taskStatus | lowercase">{{data.taskStatus}}</span></h4>
-
-  {{data.body}}
+  <div *ngIf="data.taskStatus == 'Completed'">
+    <table>
+      <tr>
+        <td class="caption">Class name</td>
+        <td class="caption">Public</td>
+        <td class="caption">Protected</td>
+        <td class="caption">Private</td>
+        <td class="caption">Internal</td>
+      </tr>
+    <tr *ngFor="let metric of data.metricFields">
+      <td>{{metric.className}}</td>
+      <td>{{metric.publicCount}}</td>
+      <td>{{metric.protectedCount}}</td>
+      <td>{{metric.privateCount}}</td>
+      <td>{{metric.internalCount}}</td>
+  </tr>
+  </table>
+</div>
 </div>

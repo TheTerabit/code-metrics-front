@@ -7,22 +7,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-
+  user: User;
   constructor(private http: HttpClient) {
     this.http.get<User>('https://paint-my-site-api.herokuapp.com/user').subscribe(data => {
       this.user = data;
-      })
+      });
      }
-
-
   ngOnInit(): void {
   }
-  
-  user: User;
-  
-
 }
-
 interface User {
   name: string;
   surname: string;

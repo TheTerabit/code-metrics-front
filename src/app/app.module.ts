@@ -7,7 +7,6 @@ import {BannerComponent} from './banner/banner.component';
 import {SideNavbarComponent} from './side-navbar/side-navbar.component';
 import {RouterModule} from '@angular/router';
 import {ContentComponent} from './content/content.component';
-import {CategoryMenuComponent} from './category-menu/category-menu.component';
 import {RestapiService} from './restapi.service';
 import {FormsModule} from '@angular/forms';
 import {UploadFileComponent} from './upload-file/upload-file.component';
@@ -18,6 +17,8 @@ import { ResultsComponent } from './results/results.component';
 import { ResultsDirective } from './directives/results.directive';
 import { MethodsResultComponent } from './results/methods-result/methods-result.component';
 import { FieldsResultComponent } from './results/fields-result/fields-result.component';
+import { CyclomaticComplexityResultComponent } from './results/cyclomatic-complexity-result/cyclomatic-complexity-result.component';
+import { LinesOfCodeResultComponent } from './results/lines-of-code-result/lines-of-code-result.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +26,14 @@ import { FieldsResultComponent } from './results/fields-result/fields-result.com
     BannerComponent,
     SideNavbarComponent,
     ContentComponent,
-    CategoryMenuComponent,
     UploadFileComponent,
     AboutMetricsComponent,
     ResultsComponent,
     ResultsDirective,
     MethodsResultComponent,
-    FieldsResultComponent
+    FieldsResultComponent,
+    CyclomaticComplexityResultComponent,
+    LinesOfCodeResultComponent
   ],
   imports: [
     FormsModule,

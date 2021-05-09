@@ -6,6 +6,8 @@ import {ResultsDirective} from '../directives/results.directive';
 import {ResultComponent} from './ResultComponent';
 import {MethodsResultComponent} from './methods-result/methods-result.component';
 import {FieldsResultComponent} from './fields-result/fields-result.component';
+import { CyclomaticComplexityResultComponent } from './cyclomatic-complexity-result/cyclomatic-complexity-result.component';
+import { LinesOfCodeResultComponent } from './lines-of-code-result/lines-of-code-result.component';
 
 @Component({
   selector: 'app-results',
@@ -28,6 +30,9 @@ export class ResultsComponent implements OnInit {
       const results = new Results();
       results.metricMethods = new Result(MethodsResultComponent, data.metricMethodsResponse);
       results.metricFields = new Result(FieldsResultComponent, data.metricFieldsResponse);
+      results.metricCyclomaticComplexity = new Result(CyclomaticComplexityResultComponent, data.metricCyclomaticComplexityResponse);
+      console.log(data.metricCyclomaticComplexityResponse)
+      results.metricLineOfCode = new Result(LinesOfCodeResultComponent, data.metricLineOfCodesResponse);
       this.showMetricResults(results);
     });
   }
@@ -37,6 +42,8 @@ export class ResultsComponent implements OnInit {
     viewContainerRef.clear();
     this.showMetricsResult(viewContainerRef, results.metricMethods);
     this.showMetricsResult(viewContainerRef, results.metricFields);
+    this.showMetricsResult(viewContainerRef, results.metricCyclomaticComplexity);
+    this.showMetricsResult(viewContainerRef, results.metricLineOfCode);
   }
 
   private showMetricsResult(viewContainerRef: ViewContainerRef, metricResult: Result) {
