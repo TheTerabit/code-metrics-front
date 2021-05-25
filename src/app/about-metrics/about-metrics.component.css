@@ -1,0 +1,27 @@
+.metrics-table
+{
+    width: 700px;
+}
+
+.metrics-table h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.metrics-form table {
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.metrics-table tr {
+    padding-top: 10px;
+}
+
+.metrics-table td {
+    display: table-cell;
+    border: 1px solid rgb(66, 66, 66);
+    min-width: 180px;
+    padding: 5px;
+}

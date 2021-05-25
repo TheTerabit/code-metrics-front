@@ -3,6 +3,38 @@
         <app-side-navbar [current]="current"></app-side-navbar>
     </div>
     <div class="content">
-        <h1>About metrics</h1>
+        <div class="metrics-table">
+            <h2>About metrics</h2>
+            <table>
+                <tr>
+                    <td>
+                        Methods
+                    </td>
+                    <td>
+                        This metric shows the number of defined methods in the class. The number of methods with concrete modifier is summed.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Fields
+                    </td>
+                    <td>
+                        This metric shows the number of defined fields in the class. The number of fields with concrete modifier is summed.                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cyclomatic Complexity</td>
+                    <td>This metric is the quantitative measure of the number of linearly independent paths in it. It is a software metric used to indicate the complexity of a program.</td>
+                </tr>
+                <tr>
+                    <td>
+                        Number of code lines
+                    </td>
+                    <td>
+                        This metric shows number of lines in class and in methods defined inside the class.
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
